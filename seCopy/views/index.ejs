@@ -1,0 +1,159 @@
+<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<head>
+<title>
+<%= title%>
+</title>
+</head>
+<body>
+
+ <script type="text/javascript">
+ //comment goes here
+
+// as forms are part of the html code so you have to add it outside your <script >tag
+function showForm(x){
+    document.getElementById(x).style.display = " block";
+}
+
+function hideForm(x){
+    document.getElementById(x).style.display = "none";
+}
+
+ </script>
+<H1>Student </H1>
+<H2 >Login </H2></br>
+ <form method="POST" action="/student/add" class="form-horizontal">
+                  <div class="form-group">
+    
+                    
+                  <label class="control-label col-sm-2" >Name:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name_USR" name="name_USR" required></br>
+                    </div>
+             
+               
+                <label class="control-label col-sm-2" > Password:</label>
+                    <div class="col-sm-10">
+                  <input type="password" class="form-control" id="password_USR" name="password_USR" required /></br>
+                </div>
+                 
+                
+                  <div class="form-group"> 
+                   <div class="col-sm-offset-10 col-sm-10">
+                    <button type="submit" class="btn btn-success" value ="submit">Login</button>
+                               </div>
+                               </div>
+       </form>
+</br>
+</br> 
+
+                  <div class="form-group"> 
+                   <div class="col-sm-offset-10 col-sm-10">
+<button type="button" onclick="showForm('registerForm');" class="btn btn-primary">Sign Up</button></br></br>
+</div>
+</div> 
+ 
+
+<span  onmouseleave="hideForm('registerForm');" id="registerForm">
+<form method="POST" action="/student/reg" class="form-horizontal">
+<div class="form-group">
+
+
+                   <H2 >Register</H2></br></br>
+
+                   <label class="control-label col-sm-2" >Name:</label>
+                      <div class="col-sm-10">
+                    <input type="text" class="form-control" id="reg_name" name="reg_name" required />
+                    </div>
+                   </br></br>  
+                 
+               
+                  
+                      <label class="control-label col-sm-2" > Password:</label>
+                    <div class="col-sm-10">
+                    <input type="password" class="form-control" id="reg_password" name="reg_password" required/>
+                    </div>
+              	  </br></br>
+                
+
+               <label class="control-label col-sm-2" >ID (only application number):</label>
+                <div class="col-sm-10">
+                <input type="number" class="form-control" id="reg_id" name="reg_id">
+                </div>
+              </br> </br>    
+                
+                    <div class="col-sm-offset-10 col-sm-10">
+                    <button type="submit" class="btn btn-success" value ="submit">Sign UP</button>
+                     </div>
+                     </div>
+                      </form>
+       </span> 
+     
+                
+  <H1>Client</H1>
+
+<!-- //action of the form is the route that we want to submit to -->
+
+ <!-- <form action="/client/add" method="POST" class="form-horizontal"  >
+<div class="form-group">
+
+ <label class="control-label col-sm-2" >Name:</label>
+  <div class="col-sm-10">
+  <input type="text" class="form-control" id="clt_name" name="cltname" required />
+  </div>
+                   </br></br>  
+                 
+                     <label class="control-label col-sm-2" > Password:</label>
+                        <div class="col-sm-10">
+                    <input type="password" class="form-control" id="clt_password" name="cltpassword" requied/>
+                    </div>
+              	  </br></br>
+
+                   <div class="form-group">
+                    <div class="col-sm-offset-10 col-sm-10">
+                     <button type="submit" class="btn btn-success">Login</button>
+   </div>
+   </div>
+   </form>  -->
+<form method="post" action="/students/summary">
+   <button type="submit"  class="btn btn-primary btn-sm"  onclick="/students'/'summary"> View Summary</button>
+   </form>
+
+<!-- <form method="POST" action="/client/reg" class="form-horizontal">
+<div class="form-group">
+
+
+                   <H2 >Register</H2></br></br>
+
+                   <label class="control-label col-sm-2" >Name:</label>
+                      <div class="col-sm-10">
+                    <input type="text" class="form-control" id="reg_name" name="reg_name" required />
+                    </div>
+                   </br></br>  
+                 
+               
+                  
+                      <label class="control-label col-sm-2" > Password:</label>
+                    <div class="col-sm-10">
+                    <input type="password" class="form-control" id="reg_password" name="reg_password" required/>
+                    </div>
+                  </br></br>
+                 
+                
+                    <div class="col-sm-offset-10 col-sm-10">
+                    <button type="submit" class="btn btn-success" value ="submit">Sign UP</button>
+                     </div>
+                     </div>
+                      </form>
+
+ -->
+
+</body>
+</html>

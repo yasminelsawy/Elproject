@@ -1,0 +1,28 @@
+db.once('open', function() {
+  // we're connected!
+
+
+// var Schema = mongoose.Schema;
+
+// var studentSchema = new Schema({
+//   username: {type:String,required:true,unique:true}, 
+//   password:{type:String,required:true},
+//   id:{type:Number ,required:false}
+// });
+
+// var students=mongoose.model('students',studentSchema);
+// // a model is a collection 
+
+// var clientSchema = new Schema({
+//   username: {type:String,required:true,unique:true}, 
+//   password:{type:String,required:true}
+// });
+
+// var clients=mongoose.model('clients',clientSchema);
+
+// var std=new student({username:'yasmin.elsaf',password:"haloo"});
+// console.log(std.username);
+// });
+
+// console.log('hywan');
+});
